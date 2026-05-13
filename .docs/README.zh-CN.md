@@ -9,7 +9,7 @@
 >
 > 请自行评估并承担可能的封号风险。
 > 
-> To avoid unnecessary impact, it is not recommended to promote or advertise this mod on official public platforms.
+> To avoid unnecessary impact, it is not recommended to promote or advertise any mods on official public platforms.
 >
 > 为避免不必要的影响，不建议在正式的公开平台进行宣传或推广模组。
 >
