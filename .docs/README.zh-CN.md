@@ -79,3 +79,93 @@
 - [x] 包含薇蒂雅家具动画修补
 
 *目前这里仅有以上 7 种修补类型*
+
+## 自行构建
+
+1. 安装 [虚幻引擎](https://www.unrealengine.com/download)。
+   你可以选择与游戏相同的 **4.26** 版本，也可以选择较新的 **5.5** 版本。  
+   本项目构建过程只需要使用其中的 `UnrealPak.exe`。
+   
+2. 克隆本项目。
+
+``` bash
+git clone https://github.com/ahalpha/Snowbreak-AnitAmend.git
+```
+
+3. 使用 `UnrealPak.exe` 打包资产为 `.pak` ，可参考以下示例脚本。
+
+<details>
+<summary>查看示例脚本</summary>
+
+#### [!] 使用前请将 `$UnrealPakPath` 修改为你自己安装的 `UnrealPak.exe` 路径。
+
+#### [!] 运行该脚本后，所有构建产物会输出至 `.dist/` 目录中。
+
+``` powershell
+$UnrealPakPath = "C:\Program Files\Epic Games\UE_4.26\Engine\Binaries\Win64\UnrealPak.exe"
+
+$ErrorActionPreference = "Stop"
+
+$patchNames = @(
+    "Basic-Universal",
+    "House-Universal",
+    "Login-Universal",
+    "Model-WindowsNoEditor",
+    "Plot-Universal",
+    "Scene-Universal"
+)
+
+$rootDir = $PSScriptRoot
+$distDir = Join-Path $rootDir ".dist"
+$listDir = Join-Path $distDir "_paklists"
+
+New-Item -ItemType Directory -Force -Path $distDir | Out-Null
+New-Item -ItemType Directory -Force -Path $listDir | Out-Null
+
+foreach ($patchName in $patchNames) {
+    Write-Host "Packing patch: $patchName"
+
+    $sourceGameDir = Join-Path $rootDir "$patchName/RawAssets/Game"
+
+    $pakFile = Join-Path $distDir "Patch_Xpand_AntiAmend_${patchName}_100_P.pak"
+    $responseFile = Join-Path $listDir "${patchName}.txt"
+
+    $sourceRootFull = (Resolve-Path $sourceGameDir).Path
+
+    $lines = New-Object System.Collections.Generic.List[string]
+
+    Get-ChildItem -Path $sourceRootFull -Recurse -File | ForEach-Object {
+        $fileFullPath = $_.FullName
+
+        $relativePath = $fileFullPath.Substring($sourceRootFull.Length).TrimStart('\', '/')
+        $relativePath = $relativePath -replace '\\', '/'
+
+        $pakPath = "../../../Game/$relativePath"
+
+        $src = $fileFullPath -replace '\\', '/'
+        $line = "`"$src`" `"$pakPath`""
+
+        $lines.Add($line)
+    }
+
+    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines($responseFile, $lines, $utf8NoBom)
+
+    if (Test-Path $pakFile) {
+        Remove-Item $pakFile -Force
+    }
+
+    & $UnrealPakPath $pakFile "-Create=$responseFile" -compress "-compressionformat=Oodle"
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "UnrealPak failed: $patchName"
+    }
+
+    Write-Host "Done: $pakFile"
+    Write-Host ""
+}
+
+Write-Host "All patches finished."
+```
+
+</details>

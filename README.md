@@ -79,3 +79,93 @@ Used to patch dormitory-related content.
 - [x] Includes Vidya furniture animation patches
 
 *Currently, only the above 7 patch types are available here.*
+
+## Build
+
+1. Install [Unreal Engine](https://www.unrealengine.com/download).  
+   You can choose the same **4.26** version as the game, or a newer **5.5** version.  
+   This project only requires `UnrealPak.exe` during the build process.
+
+2. Clone this repository.
+
+```bash
+git clone https://github.com/ahalpha/Snowbreak-AnitAmend.git
+```
+
+3. Use `UnrealPak.exe` to package the assets into `.pak` files. You may refer to the example script below.
+
+<details>
+<summary>View example script</summary>
+
+#### [!] Before using it, please change `$UnrealPakPath` to the path of your own installed `UnrealPak.exe`.
+
+#### [!] After running this script, all build outputs will be generated in the `.dist/` directory.
+
+``` powershell
+$UnrealPakPath = "C:\Program Files\Epic Games\UE_4.26\Engine\Binaries\Win64\UnrealPak.exe"
+
+$ErrorActionPreference = "Stop"
+
+$patchNames = @(
+    "Basic-Universal",
+    "House-Universal",
+    "Login-Universal",
+    "Model-WindowsNoEditor",
+    "Plot-Universal",
+    "Scene-Universal"
+)
+
+$rootDir = $PSScriptRoot
+$distDir = Join-Path $rootDir ".dist"
+$listDir = Join-Path $distDir "_paklists"
+
+New-Item -ItemType Directory -Force -Path $distDir | Out-Null
+New-Item -ItemType Directory -Force -Path $listDir | Out-Null
+
+foreach ($patchName in $patchNames) {
+    Write-Host "Packing patch: $patchName"
+
+    $sourceGameDir = Join-Path $rootDir "$patchName/RawAssets/Game"
+
+    $pakFile = Join-Path $distDir "Patch_Xpand_AntiAmend_${patchName}_100_P.pak"
+    $responseFile = Join-Path $listDir "${patchName}.txt"
+
+    $sourceRootFull = (Resolve-Path $sourceGameDir).Path
+
+    $lines = New-Object System.Collections.Generic.List[string]
+
+    Get-ChildItem -Path $sourceRootFull -Recurse -File | ForEach-Object {
+        $fileFullPath = $_.FullName
+
+        $relativePath = $fileFullPath.Substring($sourceRootFull.Length).TrimStart('\', '/')
+        $relativePath = $relativePath -replace '\\', '/'
+
+        $pakPath = "../../../Game/$relativePath"
+
+        $src = $fileFullPath -replace '\\', '/'
+        $line = "`"$src`" `"$pakPath`""
+
+        $lines.Add($line)
+    }
+
+    $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+    [System.IO.File]::WriteAllLines($responseFile, $lines, $utf8NoBom)
+
+    if (Test-Path $pakFile) {
+        Remove-Item $pakFile -Force
+    }
+
+    & $UnrealPakPath $pakFile "-Create=$responseFile" -compress "-compressionformat=Oodle"
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "UnrealPak failed: $patchName"
+    }
+
+    Write-Host "Done: $pakFile"
+    Write-Host ""
+}
+
+Write-Host "All patches finished."
+```
+
+</details>
