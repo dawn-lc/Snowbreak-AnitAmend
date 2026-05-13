@@ -26,7 +26,7 @@ Snowbreak: Containment Zone Anti Amend / Censorship Mod
 ### Platform
 Please refer to the mod file name:
 
-- **Universal** — Compatible with all versions
+- **Universal** — Compatible with all platforms
 - **WindowsNoEditor** — Intended for use on Windows only
 
 ### Patch Types
