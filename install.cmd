@@ -50,6 +50,8 @@ $Global:RepoOwner = "ahalpha"
 $Global:RepoName = "Snowbreak-AnitAmend"
 $Global:ApiBase = "https://api.github.com/repos/$RepoOwner/$RepoName"
 $Global:ModsSubPath = "game\Game\Content\Paks\mods"
+$Global:RegPath = "HKCU:\Software\SnowbreakAnitAmend"
+$Global:RegName = "GameInstallDir"
 $I18N = @{
     "zh-CN" = @{
         Title                  = "Snowbreak-AnitAmend 安装/更新工具"
@@ -106,6 +108,8 @@ $I18N = @{
         ProxyConflictDetailed  = "UseProxy 和 UseGitHubProxy 参数不能同时使用，请选择其中一种代理方式。"
         CompatibleWebReqErr    = "[兼容模式] Invoke-WebRequest 失败：{0}"
         RetryFetch             = "拉取失败，正在进行第{0} 次重试..."
+        SavedDirFound          = "找到上次保存的游戏安装位置：{0}"
+        SavedDirInvalid        = "上次保存的游戏安装位置无效，请重新输入。"
     }
     "en-US" = @{
         Title                  = "Snowbreak-AnitAmend Install / Update Tool"
@@ -162,6 +166,8 @@ If done correctly, the current location shown is the game installation directory
         ProxyConflictDetailed  = "UseProxy and UseGitHubProxy cannot be used together. Choose one proxy method."
         CompatibleWebReqErr    = "[Compatible] Invoke-WebRequest failed: {0}"
         RetryFetch             = "Fetch failed, retry {0}..."
+        SavedDirFound          = "Found previously saved game installation directory: {0}"
+        SavedDirInvalid        = "Previously saved game installation directory is invalid. Please enter again."
     }
 }
 $culture = [System.Globalization.CultureInfo]::CurrentCulture
@@ -316,6 +322,27 @@ try {
             }
         }
     }
+    function Get-SavedGameDir {
+        try {
+            $regValue = Get-ItemProperty -Path $Global:RegPath -Name $Global:RegName -ErrorAction Stop
+            return $regValue.$Global:RegName
+        }
+        catch {
+            return $null
+        }
+    }
+    function Save-GameDir {
+        param([string]$Path)
+        try {
+            if (-not (Test-Path $Global:RegPath)) {
+                New-Item -Path $Global:RegPath -Force -ErrorAction Stop | Out-Null
+            }
+            Set-ItemProperty -Path $Global:RegPath -Name $Global:RegName -Value $Path -ErrorAction Stop
+        }
+        catch {
+            # silently fail - registry save is non-critical
+        }
+    }
     if ($UseGitHubProxy -and $UseProxy) {
         throw (T "ProxyConflictDetailed")
     }
@@ -324,12 +351,23 @@ try {
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "  " (T "Title") -ForegroundColor Yellow
     Write-Host "========================================" -ForegroundColor Cyan
-    if (-not $UseGitHubProxy -and -not $UseProxy) {
-        Select-ProxyMode
-    }
+
     $gameRoot = ""
     Write-Host (T "GameDirHelp") -ForegroundColor Yellow
-    while ($true) {
+    # Try saved directory first
+    $savedDir = Get-SavedGameDir
+    if ($savedDir) {
+        Write-Host (T "SavedDirFound" $savedDir) -ForegroundColor Cyan
+        $exePath = Join-Path $savedDir "game\Game\Binaries\Win64\Game.exe"
+        if ((Test-Path $savedDir) -and (Test-Path $exePath)) {
+            $gameRoot = $savedDir
+            Write-Host (T "GameDirDetected") -ForegroundColor Green
+        }
+    }
+    if ($savedDir -and [string]::IsNullOrEmpty($gameRoot)) {
+        Write-Host (T "SavedDirInvalid") -ForegroundColor Yellow
+    }
+    while ([string]::IsNullOrEmpty($gameRoot)) {
         $inputDir = Read-Host (T "InputGameDir")
         $inputDir = $inputDir.Trim()
         if ([string]::IsNullOrWhiteSpace($inputDir)) {
@@ -359,6 +397,8 @@ try {
             break
         }
     }
+    # Save the valid directory to registry
+    Save-GameDir -Path $gameRoot
     $modsDir = Join-Path $gameRoot $ModsSubPath
     Write-Host (T "FetchingLatest") -ForegroundColor Green
     try {
@@ -444,6 +484,9 @@ try {
         }
     }
     Write-Host (T "DownloadStart") -ForegroundColor Green
+    if (-not $UseGitHubProxy -and -not $UseProxy) {
+        Select-ProxyMode
+    }
     if ($installMode -eq "install") {
         $downloadTargets = $assetMap
     }
@@ -478,7 +521,6 @@ try {
             $failCount++
         }
     }
-    Write-Host "========================================" -ForegroundColor Cyan
     if ($failCount -eq 0) {
         Write-Host (T "InstallSuccess") -ForegroundColor Green
         Write-Host (T "AlreadyLatest" $releaseName) -ForegroundColor Cyan
@@ -486,7 +528,6 @@ try {
     else {
         Write-Host (T "DownloadResultSummary" $successCount $totalFiles $failCount) -ForegroundColor Yellow
     }
-    Write-Host "========================================" -ForegroundColor Cyan
     Show-Pause
 }
 catch {
