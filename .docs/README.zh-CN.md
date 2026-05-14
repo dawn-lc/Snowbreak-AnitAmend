@@ -32,7 +32,7 @@
 ### 修补类型
 
 #### Basic - 基本修补
-内置一个必要的 [`.lua`](https://github.com/ahalpha/Snowbreak-AnitAmend/blob/master/Basic-Universal/ExtractedAssets/Game/Content/Script/Resource/ResourceAmend.lua) 文件，用于修补一些变量以启用基本的资源映射与解除限制。
+内置一个必要的 [`.lua`](https://github.com/ahalpha/Snowbreak-AnitAmend/blob/master/Basic-Universal/ExtractedAssets/Game/Content/Script/Resource/ResourceAmend.lua) 文件，用于修补一些变量以启用基本的资源映射与限制解除。
 
 - [x] 包含较新的皮肤修补
 - [x] 包含大多数的立绘修补
@@ -47,7 +47,7 @@
 - [x] 包含角色技能、大招模型修补
 
 #### 2D - 立绘修补
-在使用基础修补之上，修补了必要的静态图含教程图、插图等，与 Live2D 立绘。
+在使用基础修补之上，修补了剩余的静态图含教程图、插图等，与 Live2D 立绘。
 
 - [x] 包含立绘、静态 CG 修补
 - [x] 包含 Live2D 立绘修补
@@ -61,9 +61,9 @@
 #### Plot - 剧情修补
 用于修补剧情的相关内容。
 
-- [x] 包含部分主线剧情修补
-- [x] 包含部分角色剧情修补
-- [x] 包含部分好感剧情修补
+- [x] 包含主线剧情修补
+- [x] 包含角色剧情修补
+- [x] 包含好感剧情修补
 - [x] 支持多语言文本
 
 #### Scene - 互动场景修补
@@ -82,7 +82,7 @@
 
 ## 自行构建
 
-1. 安装 [虚幻引擎](https://www.unrealengine.com/download)。
+1. 安装任意版本的 [虚幻引擎](https://www.unrealengine.com/download)。
    *你可以选择与游戏相同的 **4.26** 版本，也可以选择较新的 **5.5** 版本。*  
    *本项目构建过程只需要使用其中的 `UnrealPak.exe`。*
    
