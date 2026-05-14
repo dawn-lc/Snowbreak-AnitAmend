@@ -1,0 +1,3566 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "HouseCharacterTemplate",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "Game/Content/Blueprints/House/Character/HouseCharacterTemplate",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "ScriptStruct'HouseCharacterTemplate'",
+        "ObjectPath": "/Script/Game"
+      },
+      "bIgnoreExtraFields": true,
+      "bIgnoreMissingFields": true
+    },
+    "Rows": {
+      "分析员": {
+        "Id": 0,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter.BP_HouseBaseCharacter_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit2.BP_HouseBaseCharacter_Suit2_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "player002_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "2",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter.BP_HouseBaseCharacter_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "player002_02",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit51.BP_HouseBaseCharacter_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "0_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "52",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit52.BP_HouseBaseCharacter_Suit52_C",
+                "SubPathString": ""
+              },
+              "ResName": "0_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "3",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit3.BP_HouseBaseCharacter_Suit3_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "player002_03",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "53",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit53.BP_HouseBaseCharacter_Suit53_C",
+                "SubPathString": ""
+              },
+              "ResName": "0_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit60.BP_HouseBaseCharacter_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "4",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit4.BP_HouseBaseCharacter_Suit4_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "player002_04",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "54",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit54.BP_HouseBaseCharacter_Suit54_C",
+                "SubPathString": ""
+              },
+              "ResName": "0_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "5",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit5.BP_HouseBaseCharacter_Suit5_C",
+                "SubPathString": ""
+              },
+              "ResName": "0",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "player002_05",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "55",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/player/BP_HouseBaseCharacter_Suit55.BP_HouseBaseCharacter_Suit55_C",
+                "SubPathString": ""
+              },
+              "ResName": "0_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/player/head/BP_player_Head.BP_player_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": null,
+        "BaseRotationSpeed": 0.0,
+        "ResName": "0",
+        "SpineName": "",
+        "IconPath": "1210008",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "1安卡西雅": {
+        "Id": 1,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1.BP_HouseNpc1_C",
+          "SubPathString": ""
+        },
+        "GirlId": 1,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1.BP_HouseNpc1_C",
+                "SubPathString": ""
+              },
+              "ResName": "1",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_Head_Preview_Cartoon_01.BP_Girl001_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_01_Head.BP_Girl001_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_Head.BP_Girl001_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl001_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1_Suit51.BP_HouseNpc1_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "1_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_Head_Preview_Cartoon_01.BP_Girl001_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_01_Head.BP_Girl001_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1_Suit60.BP_HouseNpc1_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "1_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_01a_Head.BP_Girl001_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "80",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1_Suit80.BP_HouseNpc1_Suit80_C",
+                "SubPathString": ""
+              },
+              "ResName": "1_Suit80",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_Head.BP_Girl001_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_Head.BP_Girl001_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl001_02/girl001_02_h_body01_skm_a.girl001_02_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl001_02",
+              "ItemGDPL": "7,1,1,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          },
+          {
+            "Key": "90",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1_Suit90.BP_HouseNpc1_Suit90_C",
+                "SubPathString": ""
+              },
+              "ResName": "1_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_Head.BP_Girl001_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_Head.BP_Girl001_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl001b_02/girl001b_02_h_body01_skm_a.girl001b_02_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl001b_02",
+              "ItemGDPL": "7,1,3,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          },
+          {
+            "Key": "91",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc001/BP_HouseNpc1_Suit91.BP_HouseNpc1_Suit91_C",
+                "SubPathString": ""
+              },
+              "ResName": "1_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_lv2_Head.BP_Girl001_com01_lv2_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_com01_lv2_Head.BP_Girl001_com01_lv2_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl001b_02_lv2/girl001b_02_lv2_h_body01_skm_a.girl001b_02_lv2_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl001b_02_lv2",
+              "ItemGDPL": "7,1,3,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_Head_Preview_Cartoon_01.BP_Girl001_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc001/Head/BP_Girl001_01_Head.BP_Girl001_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "安卡希雅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "2里芙": {
+        "Id": 2,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc002/BP_HouseNpc2.BP_HouseNpc2_C",
+          "SubPathString": ""
+        },
+        "GirlId": 2,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc002/BP_HouseNpc2.BP_HouseNpc2_C",
+                "SubPathString": ""
+              },
+              "ResName": "2",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc002/Head/BP_Girl002_01_Head.BP_Girl002_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc002/BP_HouseNpc2_Suit51.BP_HouseNpc2_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "2_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc002/Head/BP_Girl002_Head_Preview_Cartoon_01.BP_Girl002_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc002/BP_HouseNpc2_Suit60.BP_HouseNpc2_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "2_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc002/Head/BP_Girl002_01a_Head.BP_Girl002_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl002_01a/girl002_01a_body01_skm_a.girl002_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "里芙病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "3丽达": {
+        "Id": 3,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc003/BP_HouseNpc3.BP_HouseNpc3_C",
+          "SubPathString": ""
+        },
+        "GirlId": 3,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc003/BP_HouseNpc3.BP_HouseNpc3_C",
+                "SubPathString": ""
+              },
+              "ResName": "3",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc003/Head/BP_Girl003_01_Head.BP_Girl003_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc003/BP_HouseNpc3_Suit60.BP_HouseNpc3_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "3_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc003/Head/BP_Girl003_01a_Head.BP_Girl003_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl003_01a/girl003_01a_body01_skm_a.girl003_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "妮塔病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "4芙提雅": {
+        "Id": 4,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc004/BP_HouseNpc4.BP_HouseNpc4_C",
+          "SubPathString": ""
+        },
+        "GirlId": 4,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc004/BP_HouseNpc4.BP_HouseNpc4_C",
+                "SubPathString": ""
+              },
+              "ResName": "4",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc004/Head/BP_Girl004_01_Head.BP_Girl004_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc004/Head/BP_Girl004_01_Head.BP_Girl004_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc004/Head/BP_Girl004_com01_Head.BP_Girl004_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc004/BP_HouseNpc4_Suit60.BP_HouseNpc4_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "4_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc004/Head/BP_Girl004_01a_Head.BP_Girl004_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "芙提雅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "5茉莉安": {
+        "Id": 5,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc005/BP_HouseNpc5.BP_HouseNpc5_C",
+          "SubPathString": ""
+        },
+        "GirlId": 5,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc005/BP_HouseNpc5.BP_HouseNpc5_C",
+                "SubPathString": ""
+              },
+              "ResName": "5",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_01_Head.BP_Girl005_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_com01_Head.BP_Girl005_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl005_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc005/BP_HouseNpc5_Suit60.BP_HouseNpc5_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "5_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_01a_Head.BP_Girl005_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl005_01a/girl005_01a_body01_skm_a.girl005_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "61",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc005/BP_HouseNpc5_Suit60.BP_HouseNpc5_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "5_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_01a_face01.BP_Girl005_01a_face01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl005_01a/girl005_01a_body01_skm_a.girl005_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "90",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc005/BP_HouseNpc5_Suit90.BP_HouseNpc5_Suit90_C",
+                "SubPathString": ""
+              },
+              "ResName": "5_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_com01_Head.BP_Girl005_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc005/Head/BP_Girl005_com01_Head.BP_Girl005_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl005c_02/girl005c_02_h_body01_skm_a.girl005c_02_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl005c_02",
+              "ItemGDPL": "7,5,4,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "茉莉安病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "6晴": {
+        "Id": 6,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc006/BP_HouseNpc6.BP_HouseNpc6_C",
+          "SubPathString": ""
+        },
+        "GirlId": 6,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc006/BP_HouseNpc6.BP_HouseNpc6_C",
+                "SubPathString": ""
+              },
+              "ResName": "6",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc006/Head/BP_Girl006_01_Head.BP_Girl006_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc006/BP_HouseNpc6_Suit60.BP_HouseNpc6_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "6_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc006/Head/BP_Girl006_01a_Head.BP_Girl006_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl006_01a/girl006_01a_body01_skm_a.girl006_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "晴病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "7琴诺": {
+        "Id": 7,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc007/BP_HouseNpc7.BP_HouseNpc7_C",
+          "SubPathString": ""
+        },
+        "GirlId": 7,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc007/BP_HouseNpc7.BP_HouseNpc7_C",
+                "SubPathString": ""
+              },
+              "ResName": "7",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc007/Head/BP_Girl007_Head_Preview_Cartoon_01.BP_Girl007_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc007/Head/BP_Girl007_01_Head.BP_Girl007_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc007/BP_HouseNpc7_Suit60.BP_HouseNpc7_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "7_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc007/Head/BP_Girl007_01a_Head.BP_Girl007_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl007_01a/girl007_01a_body01_skm_a.girl007_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc007/Head/BP_Girl007_Head_Preview_Cartoon_01.BP_Girl007_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc007/Head/BP_Girl007_01_Head.BP_Girl007_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "琴诺病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "8芬妮": {
+        "Id": 8,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc008/BP_HouseNpc8.BP_HouseNpc8_C",
+          "SubPathString": ""
+        },
+        "GirlId": 8,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc008/BP_HouseNpc8.BP_HouseNpc8_C",
+                "SubPathString": ""
+              },
+              "ResName": "8",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_01_Head.BP_Girl008_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_com01_Head.BP_Girl008_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc008/BP_HouseNpc8_Suit51.BP_HouseNpc8_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "8_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_Head_Preview_Cartoon_01.BP_Girl008_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc008/BP_HouseNpc8_Suit60.BP_HouseNpc8_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "8_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_01a_Head.BP_Girl008_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl008_01a/girl008_01a_body01_skm_a.girl008_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "80",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc008/BP_HouseNpc8_Suit80.BP_HouseNpc8_Suit80_C",
+                "SubPathString": ""
+              },
+              "ResName": "8_Suit80",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_com01_Head.BP_Girl008_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc008/Head/BP_Girl008_com01_Head.BP_Girl008_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl008c_02/girl008c_02_h_body01_skm_a.girl008c_02_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl008c_02",
+              "ItemGDPL": "7,8,4,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "芬妮病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "10肴": {
+        "Id": 10,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10.BP_HouseNpc10_C",
+          "SubPathString": ""
+        },
+        "GirlId": 10,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10.BP_HouseNpc10_C",
+                "SubPathString": ""
+              },
+              "ResName": "10",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_01_Head.BP_Girl010_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_Head_Preview_Cartoon_01.BP_Girl010_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_com01_Head.BP_Girl010_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl010_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10_Suit51.BP_HouseNpc10_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "10_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_Head_Preview_Cartoon_01.BP_Girl010_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10_Suit60.BP_HouseNpc10_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "10_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_01a_Head.BP_Girl010_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl010_01a/girl010_01a_body01_skm_a.girl010_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "61",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10_Suit60.BP_HouseNpc10_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "10_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_01a_face01.BP_Girl010_01a_face01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl010_01a/girl010_01a_body01_skm_a.girl010_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "90",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc010/BP_HouseNpc10_Suit90.BP_HouseNpc10_Suit90_C",
+                "SubPathString": ""
+              },
+              "ResName": "10_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_com01_Head.BP_Girl010_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_com01_Head.BP_Girl010_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl010_04",
+              "ItemGDPL": "7,10,1,4",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_01_Head.BP_Girl010_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc010/Head/BP_Girl010_Head_Preview_Cartoon_01.BP_Girl010_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "肴病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "11恩雅": {
+        "Id": 11,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc011/BP_HouseNpc11.BP_HouseNpc11_C",
+          "SubPathString": ""
+        },
+        "GirlId": 11,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc011/BP_HouseNpc11.BP_HouseNpc11_C",
+                "SubPathString": ""
+              },
+              "ResName": "11",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc011/Head/BP_Girl011_Head_Preview_Cartoon_01.BP_Girl011_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc011/BP_HouseNpc11_Suit60.BP_HouseNpc11_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "11_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc011/Head/BP_Girl011_01a_Head.BP_Girl011_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl011_01a/girl011_01a_body01_skm_a.girl011_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "恩雅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "12猫汐尔": {
+        "Id": 12,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc012/BP_HouseNpc12.BP_HouseNpc12_C",
+          "SubPathString": ""
+        },
+        "GirlId": 12,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc012/BP_HouseNpc12.BP_HouseNpc12_C",
+                "SubPathString": ""
+              },
+              "ResName": "12",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc012/Head/BP_Girl012_01_Head.BP_Girl012_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc012/BP_HouseNpc12_Suit60.BP_HouseNpc12_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "12_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc012/Head/BP_Girl012_01a_Head.BP_Girl012_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "猫汐尔病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "13瑟瑞斯": {
+        "Id": 13,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc013/BP_HouseNpc13.BP_HouseNpc13_C",
+          "SubPathString": ""
+        },
+        "GirlId": 13,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc013/BP_HouseNpc13.BP_HouseNpc13_C",
+                "SubPathString": ""
+              },
+              "ResName": "13",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_Head_Preview_Cartoon_01.BP_Girl013_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_01_Head.BP_Girl013_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_com01_Head.BP_Girl013_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl013_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc013/BP_HouseNpc13_Suit60.BP_HouseNpc13_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "13_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_01a_Head.BP_Girl013_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl013_01a/girl013_01a_body01_skm_a.girl013_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "80",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc013/BP_HouseNpc13_Suit80.BP_HouseNpc13_Suit80_C",
+                "SubPathString": ""
+              },
+              "ResName": "13_Suit80",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_com01_Head.BP_Girl013_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_com01_Head.BP_Girl013_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl013b_02/girl013b_02_h_body01_skm_a.girl013b_02_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl013b_02",
+              "ItemGDPL": "7,13,3,2",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          },
+          {
+            "Key": "90",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc013/BP_HouseNpc13_Suit90.BP_HouseNpc13_Suit90_C",
+                "SubPathString": ""
+              },
+              "ResName": "13_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_com01_Head.BP_Girl013_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_com01_Head.BP_Girl013_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl013b_03/girl013b_03_h_body01_skm_a.girl013b_03_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl013b_03",
+              "ItemGDPL": "7,13,3,3",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_Head_Preview_Cartoon_01.BP_Girl013_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc013/Head/BP_Girl013_01_Head.BP_Girl013_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "瑟瑞斯病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "14辰星": {
+        "Id": 14,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc014/BP_HouseNpc14.BP_HouseNpc14_C",
+          "SubPathString": ""
+        },
+        "GirlId": 14,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc014/BP_HouseNpc14.BP_HouseNpc14_C",
+                "SubPathString": ""
+              },
+              "ResName": "14",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc014/Head/BP_Girl014_Head_Preview_Cartoon_01.BP_Girl014_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc014/BP_HouseNpc14_Suit60.BP_HouseNpc14_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "14_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc014/Head/BP_Girl014_01a_Head.BP_Girl014_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl014_01a/girl014_01a_body01_skm_a.girl014_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "61",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc014/BP_HouseNpc14_Suit60.BP_HouseNpc14_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "14_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc014/Head/BP_Girl014_01a_face01.BP_Girl014_01a_face01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl014_01a/girl014_01a_body01_skm_a.girl014_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "辰星病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "15凯茜娅": {
+        "Id": 15,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc015/BP_HouseNpc15.BP_HouseNpc15_C",
+          "SubPathString": ""
+        },
+        "GirlId": 15,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc015/BP_HouseNpc15.BP_HouseNpc15_C",
+                "SubPathString": ""
+              },
+              "ResName": "15",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_Head_Preview_Cartoon_01.BP_Girl015_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_01_Head.BP_Girl015_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc015/BP_HouseNpc15_Suit51.BP_HouseNpc15_Suit51_C",
+                "SubPathString": ""
+              },
+              "ResName": "15_Suit51",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_Head_Preview_Cartoon_01.BP_Girl015_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_01_Head.BP_Girl015_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc015/BP_HouseNpc15_Suit60.BP_HouseNpc15_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "15_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_01a_Head.BP_Girl015_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl015_01a/girl015_01a_body01_skm_a.girl015_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_Head_Preview_Cartoon_01.BP_Girl015_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc015/Head/BP_Girl015_01_Head.BP_Girl015_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "凯茜娅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "16伊切尔": {
+        "Id": 16,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc016/BP_HouseNpc16.BP_HouseNpc16_C",
+          "SubPathString": ""
+        },
+        "GirlId": 16,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc016/BP_HouseNpc16.BP_HouseNpc16_C",
+                "SubPathString": ""
+              },
+              "ResName": "16",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc016/Head/BP_Girl016_Head_Preview_Cartoon_01.BP_Girl016_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc016/Head/BP_Girl016_01_Head.BP_Girl016_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc016/BP_HouseNpc16_Suit60.BP_HouseNpc16_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "16_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc016/Head/BP_Girl016_01a_Head.BP_Girl016_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl016_01a/girl016_01a_body01_skm_a.girl016_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc016/Head/BP_Girl016_Head_Preview_Cartoon_01.BP_Girl016_Head_Preview_Cartoon_01_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep2": [
+          {
+            "AssetPathName": "/Game/Blueprints/House/Character/npc016/Head/BP_Girl016_01_Head.BP_Girl016_01_Head_C",
+            "SubPathString": ""
+          }
+        ],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "伊切尔病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "17苔丝": {
+        "Id": 17,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc017/BP_HouseNpc17.BP_HouseNpc17_C",
+          "SubPathString": ""
+        },
+        "GirlId": 17,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc017/BP_HouseNpc17.BP_HouseNpc17_C",
+                "SubPathString": ""
+              },
+              "ResName": "17",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc017/Head/BP_Girl017_Head_Preview_Cartoon_01.BP_Girl017_Head_Preview_Cartoon_01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc017/BP_HouseNpc17_Suit60.BP_HouseNpc17_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "17_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc017/Head/BP_Girl017_01a_Head.BP_Girl017_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl017_01a/girl017_01a_body01_skm_a.girl017_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "61",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc017/BP_HouseNpc17_Suit60.BP_HouseNpc17_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "17_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc017/Head/BP_Girl017_01a_face01.BP_Girl017_01a_face01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl017_01a/girl017_01a_body01_skm_a.girl017_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "苔丝病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "18龙舌兰": {
+        "Id": 18,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc018/BP_HouseNpc18.BP_HouseNpc18_C",
+          "SubPathString": ""
+        },
+        "GirlId": 18,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc018/BP_HouseNpc18.BP_HouseNpc18_C",
+                "SubPathString": ""
+              },
+              "ResName": "18",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc018/Head/BP_Girl018_01_Head.BP_Girl018_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc018/Head/BP_Girl018_com01_Head.BP_Girl018_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc018/BP_HouseNpc18_Suit60.BP_HouseNpc18_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "18_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc018/Head/BP_Girl018_01a_Head.BP_Girl018_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl018_01a/girl018_01a_body01_skm_a.girl018_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "80",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc018/BP_HouseNpc18_Suit80.BP_HouseNpc18_Suit80_C",
+                "SubPathString": ""
+              },
+              "ResName": "18_Suit80",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc018/Head/BP_Girl018_com01_Head.BP_Girl018_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc018/Head/BP_Girl018_com01_Head.BP_Girl018_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl018a_03/girl018a_03_h_body01_skm_a.girl018a_03_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl018a_03",
+              "ItemGDPL": "7,18,2,3",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "薇蒂雅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "20卜卜": {
+        "Id": 20,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc020/BP_HouseNpc20.BP_HouseNpc20_C",
+          "SubPathString": ""
+        },
+        "GirlId": 20,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc020/BP_HouseNpc20.BP_HouseNpc20_C",
+                "SubPathString": ""
+              },
+              "ResName": "20",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc020/Head/BP_Girl020_01_Head.BP_Girl020_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "60",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc020/BP_HouseNpc20_Suit60.BP_HouseNpc20_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "20_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc020/Head/BP_Girl020_01a_Head.BP_Girl020_01a_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl020_01a/girl020_01a_body01_skm_a.girl020_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "61",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc020/BP_HouseNpc20_Suit60.BP_HouseNpc20_Suit60_C",
+                "SubPathString": ""
+              },
+              "ResName": "20_Suit60",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc020/Head/BP_Girl020_01a_face01.BP_Girl020_01a_face01_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl020_01a/girl020_01a_body01_skm_a.girl020_01a_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "卜卜病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "21奈莉德": {
+        "Id": 21,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc021/BP_HouseNpc21.BP_HouseNpc21_C",
+          "SubPathString": ""
+        },
+        "GirlId": 21,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc021/BP_HouseNpc21.BP_HouseNpc21_C",
+                "SubPathString": ""
+              },
+              "ResName": "21",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc021/Head/BP_Girl021_01_Head.BP_Girl021_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc021/Head/BP_Girl021_com01_Head.BP_Girl021_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          },
+          {
+            "Key": "80",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc021/BP_HouseNpc21_Suit80.BP_HouseNpc21_Suit80_C",
+                "SubPathString": ""
+              },
+              "ResName": "21_Suit80",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc021/Head/BP_Girl021_com01_Head.BP_Girl021_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc021/Head/BP_Girl021_com01_Head.BP_Girl021_com01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl021_03/girl021_03_h_body01_skm_a.girl021_03_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl021_03",
+              "ItemGDPL": "7,21,1,3",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "奈莉德病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "22克罗瑞娜": {
+        "Id": 22,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc022/BP_HouseNpc22.BP_HouseNpc22_C",
+          "SubPathString": ""
+        },
+        "GirlId": 22,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc022/BP_HouseNpc22.BP_HouseNpc22_C",
+                "SubPathString": ""
+              },
+              "ResName": "22",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc022/Head/BP_Girl022_01_Head.BP_Girl022_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "克罗瑞娜病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "23米娅": {
+        "Id": 23,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc023/BP_HouseNpc23.BP_HouseNpc23_C",
+          "SubPathString": ""
+        },
+        "GirlId": 23,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc023/BP_HouseNpc23.BP_HouseNpc23_C",
+                "SubPathString": ""
+              },
+              "ResName": "23",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc023/Head/BP_Girl023_01_Head.BP_Girl023_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl023_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": [
+                90
+              ]
+            }
+          },
+          {
+            "Key": "90",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc023/BP_HouseNpc23_Suit90.BP_HouseNpc23_Suit90_C",
+                "SubPathString": ""
+              },
+              "ResName": "23_Suit90",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc023/Head/BP_Girl023_01_Head.BP_Girl023_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "/Game/Characters/Girl/girl023_03/girl023_03_h_body01_skm_a.girl023_03_h_body01_skm_a",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl023_03",
+              "ItemGDPL": "7,23,1,3",
+              "ConfigureAreaId": [
+                -1
+              ]
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "米娅病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "24胧嫣": {
+        "Id": 24,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc024/BP_HouseNpc24.BP_HouseNpc24_C",
+          "SubPathString": ""
+        },
+        "GirlId": 24,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc024/BP_HouseNpc24.BP_HouseNpc24_C",
+                "SubPathString": ""
+              },
+              "ResName": "24",
+              "Accessories": [
+                {
+                  "AssetPathName": "/Game/Blueprints/House/Character/npc024/Head/BP_Girl024_01_Head.BP_Girl024_01_Head_C",
+                  "SubPathString": ""
+                }
+              ],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "girl024_01",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "胧嫣病号服",
+        "IconPath": "",
+        "ShowOnMap": true,
+        "bBornOnOpen": true,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "house_stand"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "小吉-大厅": {
+        "Id": 99,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "小吉-按摩室": {
+        "Id": 98,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "小吉-温泉": {
+        "Id": 97,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "小吉-酒吧": {
+        "Id": 96,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "大厅-卡罗林": {
+        "Id": 101,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc101/BP_HouseNpc101.BP_HouseNpc101_C",
+          "SubPathString": ""
+        },
+        "GirlId": 101,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc101/BP_HouseNpc101.BP_HouseNpc101_C",
+                "SubPathString": ""
+              },
+              "ResName": "101",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "酒馆-卡罗林": {
+        "Id": 103,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc103/BP_HouseNpc103.BP_HouseNpc103_C",
+          "SubPathString": ""
+        },
+        "GirlId": 103,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc103/BP_HouseNpc103.BP_HouseNpc103_C",
+                "SubPathString": ""
+              },
+              "ResName": "103",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": true
+      },
+      "吧台喝咖啡的女研究员（201stool)": {
+        "Id": 201,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc201/BP_HouseNpc201.BP_HouseNpc201_C",
+          "SubPathString": ""
+        },
+        "GirlId": 201,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc201/BP_HouseNpc201.BP_HouseNpc201_C",
+                "SubPathString": ""
+              },
+              "ResName": "201",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "站在饮料机前的女研究员（202stand）": {
+        "Id": 202,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc202/BP_HouseNpc202.BP_HouseNpc202_C",
+          "SubPathString": ""
+        },
+        "GirlId": 202,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc202/BP_HouseNpc202.BP_HouseNpc202_C",
+                "SubPathString": ""
+              },
+              "ResName": "202",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "站在视频操作仪器旁的女安保（203stand)": {
+        "Id": 203,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc203/BP_HouseNpc203.BP_HouseNpc203_C",
+          "SubPathString": ""
+        },
+        "GirlId": 203,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc203/BP_HouseNpc203.BP_HouseNpc203_C",
+                "SubPathString": ""
+              },
+              "ResName": "203",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "站在大厅入口处的女安保（204stand)": {
+        "Id": 204,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc204/BP_HouseNpc204.BP_HouseNpc204_C",
+          "SubPathString": ""
+        },
+        "GirlId": 204,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc204/BP_HouseNpc204.BP_HouseNpc204_C",
+                "SubPathString": ""
+              },
+              "ResName": "204",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "坐沙发的女研究员1（205sofa)": {
+        "Id": 205,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc205/BP_HouseNpc205.BP_HouseNpc205_C",
+          "SubPathString": ""
+        },
+        "GirlId": 205,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc205/BP_HouseNpc205.BP_HouseNpc205_C",
+                "SubPathString": ""
+              },
+              "ResName": "205",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "坐沙发的女研究员2（206sofa)": {
+        "Id": 206,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc206/BP_HouseNpc206.BP_HouseNpc206_C",
+          "SubPathString": ""
+        },
+        "GirlId": 206,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc206/BP_HouseNpc206.BP_HouseNpc206_C",
+                "SubPathString": ""
+              },
+              "ResName": "206",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "坐沙发的女研究员3（207sofa)": {
+        "Id": 207,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/npc207/BP_HouseNpc207.BP_HouseNpc207_C",
+          "SubPathString": ""
+        },
+        "GirlId": 207,
+        "SuitMap": [
+          {
+            "Key": "1",
+            "Value": {
+              "BluePrint": {
+                "AssetPathName": "/Game/Blueprints/House/Character/npc207/BP_HouseNpc207.BP_HouseNpc207_C",
+                "SubPathString": ""
+              },
+              "ResName": "207",
+              "Accessories": [],
+              "Accessories2": [],
+              "Accessories3": [],
+              "Accessories4": [],
+              "Accessories5": [],
+              "SafeMesh": {
+                "AssetPathName": "None",
+                "SubPathString": ""
+              },
+              "ResNameDec": "",
+              "ItemGDPL": "",
+              "ConfigureAreaId": []
+            }
+          }
+        ],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": true,
+        "FixedBornArea": 0,
+        "BehaviorTree": {
+          "AssetPathName": "/Game/Blueprints/House/AI/BT_HouseTest.BT_HouseTest",
+          "SubPathString": ""
+        },
+        "IdleMontages": [
+          "stand01"
+        ],
+        "UseNeckBlendSpace": false
+      },
+      "小吉-沙滩": {
+        "Id": 95,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      },
+      "小吉-电玩城": {
+        "Id": 94,
+        "Blueprint": {
+          "AssetPathName": "/Game/Blueprints/House/Character/BP_HouseNpc99.BP_HouseNpc99_C",
+          "SubPathString": ""
+        },
+        "GirlId": -1,
+        "SuitMap": [],
+        "Accessories": [],
+        "Accessories_Rep2": [],
+        "Accessories_Rep3": [],
+        "Accessories_Rep4": [],
+        "Accessories_Rep5": [],
+        "PlayerRingMap": [],
+        "BaseRotationSpeed": 0.0,
+        "ResName": "99",
+        "SpineName": "",
+        "IconPath": "",
+        "ShowOnMap": false,
+        "bBornOnOpen": false,
+        "FixedBornArea": -1,
+        "BehaviorTree": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "IdleMontages": [],
+        "UseNeckBlendSpace": false
+      }
+    }
+  }
+]
