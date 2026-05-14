@@ -38,7 +38,7 @@ param(
     [switch]$UseGitHubProxy = $false,
     [Parameter(Mandatory = $false)]
     [Alias("ghp")]
-    [string]$GitHubProxy = "https://gh-proxy.org/",
+    [string]$GitHubProxy = "https://gh-proxy.org",
     [Parameter(Mandatory = $false)]
     [Alias("up")]
     [switch]$UseProxy = $false,
@@ -87,6 +87,7 @@ $I18N = @{
         GameExeNotFound        = "未找到 Game.exe（{0}），请确认游戏根目录是否正确"
         DownloadStart          = "开始下载..."
         FileSizeBytes          = "文件大小：{0}"
+        ProxyTitle             = ""
         ProxyPrompt            = "请选择下载方式："
         ProxyChoiceLabelNo     = "&No proxy"
         ProxyChoiceHelpNo      = "不使用任何代理，直连 GitHub"
@@ -94,8 +95,8 @@ $I18N = @{
         ProxyChoiceHelpGHP     = "通过 gh-proxy 镜像加速下载"
         ProxyChoiceLabelCustom = "&Custom proxy"
         ProxyChoiceHelpCustom  = "使用自定义的 HTTP/HTTPS 代理服务器"
-        ProxyInputUrl          = "请输入 GitHub 代理镜像 URL"
-        ProxyInputCustom       = "请输入自定义 HTTP 代理地址（例如 http://127.0.0.1:7890）"
+        ProxyInputUrl          = "请输入 GitHub 代理镜像 URL（默认 https://gh-proxy.org/）"
+        ProxyInputCustom       = "请输入自定义 HTTP 代理地址（默认 http://127.0.0.1:7890）"
         ProxyConflictDetailed  = "UseProxy 和 UseGitHubProxy 参数不能同时使用，请选择其中一种代理方式。"
         CompatibleWebReqErr    = "[兼容模式] Invoke-WebRequest 失败：{0}"
         RetryFetch             = "拉取失败，正在进行第 {0} 次重试..."
@@ -136,6 +137,7 @@ $I18N = @{
         GameExeNotFound        = "Game.exe not found ({0}). Please verify the game root directory"
         DownloadStart          = "Starting download..."
         FileSizeBytes          = "File size: {0}"
+        ProxyTitle             = ""
         ProxyPrompt            = "Please choose download method:"
         ProxyChoiceLabelNo     = "&No proxy"
         ProxyChoiceHelpNo      = "Connect directly without proxy"
@@ -143,8 +145,8 @@ $I18N = @{
         ProxyChoiceHelpGHP     = "Accelerate download via gh-proxy mirror"
         ProxyChoiceLabelCustom = "&Custom proxy"
         ProxyChoiceHelpCustom  = "Use a custom HTTP/HTTPS proxy server"
-        ProxyInputUrl          = "Enter GitHub proxy mirror URL"
-        ProxyInputCustom       = "Enter custom HTTP proxy address (e.g. http://127.0.0.1:7890)"
+        ProxyInputUrl          = "Enter GitHub proxy mirror URL (default https://gh-proxy.org/)"
+        ProxyInputCustom       = "Enter custom HTTP proxy address (default http://127.0.0.1:7890)"
         ProxyConflictDetailed  = "UseProxy and UseGitHubProxy cannot be used together. Choose one proxy method."
         CompatibleWebReqErr    = "[Compatible] Invoke-WebRequest failed: {0}"
         RetryFetch             = "Fetch failed, retry {0}..."
@@ -285,7 +287,7 @@ try {
             [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelGHP"), (T "ProxyChoiceHelpGHP")),
             [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelCustom"), (T "ProxyChoiceHelpCustom"))
         )
-        $selected = $Host.UI.PromptForChoice("", (T "ProxyPrompt"), $proxyChoices, 0)
+        $selected = $Host.UI.PromptForChoice((T "ProxyTitle"), (T "ProxyPrompt") , $proxyChoices, 1)
         switch ($selected) {
             1 {
                 $url = Read-Host (T "ProxyInputUrl")
