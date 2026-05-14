@@ -164,326 +164,322 @@ function T {
     }
     return $text
 }
-try {
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-}
-catch {
-    Write-Host "Failed to initialize TLS: $_" -ForegroundColor Red
-    exit 1
-}
-if ($UseGitHubProxy -and $UseProxy) {
-    Write-Host (T "ProxyConflictDetailed") -ForegroundColor Red
-    [System.Console]::ReadKey($true) > $null
-    exit 1
-}
 function Show-Pause {
     param([string]$Text = (T "PressAnyKey"))
     Write-Host "$Text" -ForegroundColor Cyan
     [System.Console]::ReadKey($true) > $null
 }
-function Invoke-WebRequestCompatible {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$Uri,
-        [Parameter(Mandatory = $false)]
-        [string]$OutFile
-    )
-    if ($PSVersionTable.PSVersion.Major -lt 5) {
-        try {
-            $client = New-Object System.Net.WebClient
-            if ($UseProxy) {
-                $client.Proxy = New-Object System.Net.WebProxy($Proxy)
+try {
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    function Invoke-WebRequestCompatible {
+        param(
+            [Parameter(Mandatory = $true)]
+            [string]$Uri,
+            [Parameter(Mandatory = $false)]
+            [string]$OutFile
+        )
+        if ($PSVersionTable.PSVersion.Major -lt 5) {
+            try {
+                $client = New-Object System.Net.WebClient
+                if ($UseProxy) {
+                    $client.Proxy = New-Object System.Net.WebProxy($Proxy)
+                }
+                if ($OutFile) {
+                    $client.DownloadFile($Uri, $OutFile)
+                    return $null
+                }
+                else {
+                    $response = $client.DownloadString($Uri)
+                    return $response
+                }
             }
-            if ($OutFile) {
-                $client.DownloadFile($Uri, $OutFile)
-                return $null
+            catch {
+                throw (T "CompatibleWebReqErr" $_)
             }
-            else {
-                $response = $client.DownloadString($Uri)
-                return $response
-            }
-        }
-        catch {
-            throw (T "CompatibleWebReqErr" $_)
-        }
-    }
-    else {
-        $params = @{
-            Uri             = $Uri
-            UseBasicParsing = $true
-        }
-        if ($UseProxy) {
-            $params.Proxy = $Proxy
-        }
-        if ($OutFile) {
-            $params.OutFile = $OutFile
-            Invoke-WebRequest @params
         }
         else {
-            return Invoke-WebRequest @params
-        }
-    }
-}
-function Invoke-RestMethodCompatible {
-    param([string]$Uri)
-    $maxRetries = 2
-    $lastError = $null
-    for ($attempt = 1; $attempt -le $maxRetries; $attempt++) {
-        try {
-            if ($PSVersionTable.PSVersion.Major -lt 5) {
-                $rawJson = Invoke-WebRequestCompatible -Uri $Uri
-                $result = $rawJson | ConvertFrom-Json
-                return $result
+            $params = @{
+                Uri             = $Uri
+                UseBasicParsing = $true
+            }
+            if ($UseProxy) {
+                $params.Proxy = $Proxy
+            }
+            if ($OutFile) {
+                $params.OutFile = $OutFile
+                Invoke-WebRequest @params
             }
             else {
-                $params = @{
-                    Uri             = $Uri
-                    UseBasicParsing = $true
-                    ErrorAction     = "Stop"
+                return Invoke-WebRequest @params
+            }
+        }
+    }
+    function Invoke-RestMethodCompatible {
+        param([string]$Uri)
+        $maxRetries = 2
+        $lastError = $null
+        for ($attempt = 1; $attempt -le $maxRetries; $attempt++) {
+            try {
+                if ($PSVersionTable.PSVersion.Major -lt 5) {
+                    $rawJson = Invoke-WebRequestCompatible -Uri $Uri
+                    $result = $rawJson | ConvertFrom-Json
+                    return $result
                 }
-                if ($UseProxy) {
-                    $params.Proxy = $Proxy
+                else {
+                    $params = @{
+                        Uri             = $Uri
+                        UseBasicParsing = $true
+                        ErrorAction     = "Stop"
+                    }
+                    if ($UseProxy) {
+                        $params.Proxy = $Proxy
+                    }
+                    return Invoke-RestMethod @params
                 }
-                return Invoke-RestMethod @params
+            }
+            catch {
+                $lastError = $_
+                if ($attempt -lt $maxRetries) {
+                    Write-Host (T "RetryFetch" $attempt) -ForegroundColor Yellow
+                    Start-Sleep -Seconds 2
+                }
+            }
+        }
+        throw $lastError
+    }
+    function Get-DownloadUrl {
+        param([string]$OriginalUrl)
+        if ($UseGitHubProxy) {
+            $githubProxy = $GitHubProxy.TrimEnd('/')
+            return "$githubProxy/$OriginalUrl"
+        }
+        return $OriginalUrl
+    }
+    function Get-FileSha256 {
+        param([string]$FilePath)
+        try {
+            $sha256 = [System.Security.Cryptography.SHA256]::Create()
+            $stream = [System.IO.File]::OpenRead($FilePath)
+            try {
+                $hashBytes = $sha256.ComputeHash($stream)
+                return ($hashBytes | ForEach-Object { $_.ToString("x2") }) -join ""
+            }
+            finally {
+                $stream.Close()
             }
         }
         catch {
-            $lastError = $_
-            if ($attempt -lt $maxRetries) {
-                Write-Host (T "RetryFetch" $attempt) -ForegroundColor Yellow
-                Start-Sleep -Seconds 2
+            return $null
+        }
+    }
+    function Format-FileSize {
+        param([long]$Bytes)
+        if ($Bytes -ge 1GB) { return "{0:N2} GB" -f ($Bytes / 1GB) }
+        if ($Bytes -ge 1MB) { return "{0:N2} MB" -f ($Bytes / 1MB) }
+        if ($Bytes -ge 1KB) { return "{0:N2} KB" -f ($Bytes / 1KB) }
+        return "$Bytes B"
+    }
+    function Select-ProxyMode {
+        $proxyChoices = @(
+            [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelNo"), (T "ProxyChoiceHelpNo")),
+            [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelGHP"), (T "ProxyChoiceHelpGHP")),
+            [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelCustom"), (T "ProxyChoiceHelpCustom"))
+        )
+        $selected = $Host.UI.PromptForChoice("", (T "ProxyPrompt"), $proxyChoices, 0)
+        switch ($selected) {
+            1 {
+                $url = Read-Host (T "ProxyInputUrl")
+                if ([string]::IsNullOrWhiteSpace($url)) { $url = $GitHubProxy }
+                $url = $url.TrimEnd('/')
+                $Global:UseGitHubProxy = $true
+                $Global:GitHubProxy = $url
+            }
+            2 {
+                $addr = Read-Host (T "ProxyInputCustom")
+                if ([string]::IsNullOrWhiteSpace($addr)) { $addr = $Proxy }
+                $Global:UseProxy = $true
+                $Global:Proxy = $addr
             }
         }
     }
-    throw $lastError
-}
-function Get-DownloadUrl {
-    param([string]$OriginalUrl)
-    if ($UseGitHubProxy) {
-        $githubProxy = $GitHubProxy.TrimEnd('/')
-        return "$githubProxy/$OriginalUrl"
+    if ($UseGitHubProxy -and $UseProxy) {
+        throw (T "ProxyConflictDetailed")
     }
-    return $OriginalUrl
-}
-function Get-FileSha256 {
-    param([string]$FilePath)
-    try {
-        $sha256 = [System.Security.Cryptography.SHA256]::Create()
-        $stream = [System.IO.File]::OpenRead($FilePath)
-        try {
-            $hashBytes = $sha256.ComputeHash($stream)
-            return ($hashBytes | ForEach-Object { $_.ToString("x2") }) -join ""
+    Clear-Host
+    $host.UI.RawUI.WindowTitle = T "Title"
+    Write-Host "========================================" -ForegroundColor Cyan
+    Write-Host "  " (T "Title") -ForegroundColor Yellow
+    Write-Host "========================================" -ForegroundColor Cyan
+    if (-not $UseGitHubProxy -and -not $UseProxy) {
+        Select-ProxyMode
+    }
+    $gameRoot = ""
+    while ($true) {
+        $inputDir = Read-Host (T "InputGameDir")
+        $inputDir = $inputDir.Trim()
+        if ([string]::IsNullOrWhiteSpace($inputDir)) {
+            Write-Host (T "GameDirNotFound" "null") -ForegroundColor Red
+            continue
         }
-        finally {
-            $stream.Close()
+        $inputDir = $inputDir.Trim('"', "'")
+        if (-not (Test-Path $inputDir)) {
+            Write-Host (T "GameDirNotFound" $inputDir) -ForegroundColor Red
+            continue
+        }
+        $exePath = Join-Path $inputDir "game\Game\Binaries\Win64\Game.exe"
+        if (-not (Test-Path $exePath)) {
+            Write-Host (T "GameExeNotFound" $inputDir) -ForegroundColor Red
+        }
+        else {
+            $gameRoot = $inputDir
+            Write-Host (T "GameDirDetected") -ForegroundColor Green
+            break
+        }
+        $choices = [System.Management.Automation.Host.ChoiceDescription[]]@(
+            [System.Management.Automation.Host.ChoiceDescription]::new((T "YesLabel"), (T "YesHelp")),
+            [System.Management.Automation.Host.ChoiceDescription]::new((T "NoLabel"), (T "NoHelp"))
+        )
+        $confirm = $Host.UI.PromptForChoice("", (T "DirConfirm"), $choices, 0)
+        if ($confirm -eq 0) {
+            $gameRoot = $inputDir
+            break
+        }
+    }
+    $modsDir = Join-Path $gameRoot $ModsSubPath
+    Write-Host (T "FetchingLatest") -ForegroundColor Green
+    try {
+        $latestRelease = Invoke-RestMethodCompatible -Uri "$ApiBase/releases/latest"
+        $tagName = $latestRelease.tag_name
+        $releaseName = $latestRelease.name
+        $releaseAssets = $latestRelease.assets
+        Write-Host (T "ParsedReleaseInfo" $releaseName $tagName) -ForegroundColor Cyan
+        $assetMap = @{}
+        foreach ($asset in $releaseAssets) {
+            $name = $asset.name
+            $sha256Hex = ""
+            if ($asset.digest -match "^sha256:([a-f0-9]+)$") {
+                $sha256Hex = $Matches[1]
+            }
+            $assetMap[$name] = @{
+                Sha256 = $sha256Hex
+                Url    = $asset.browser_download_url
+                Size   = $asset.size
+            }
         }
     }
     catch {
-        return $null
+        throw (T "FetchLatestFail" $_.Exception.Message)
     }
-}
-function Format-FileSize {
-    param([long]$Bytes)
-    if ($Bytes -ge 1GB) { return "{0:N2} GB" -f ($Bytes / 1GB) }
-    if ($Bytes -ge 1MB) { return "{0:N2} MB" -f ($Bytes / 1MB) }
-    if ($Bytes -ge 1KB) { return "{0:N2} KB" -f ($Bytes / 1KB) }
-    return "$Bytes B"
-}
-function Select-ProxyMode {
-    $proxyChoices = @(
-        [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelNo"), (T "ProxyChoiceHelpNo")),
-        [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelGHP"), (T "ProxyChoiceHelpGHP")),
-        [System.Management.Automation.Host.ChoiceDescription]::new((T "ProxyChoiceLabelCustom"), (T "ProxyChoiceHelpCustom"))
-    )
-    $selected = $Host.UI.PromptForChoice("", (T "ProxyPrompt"), $proxyChoices, 0)
-    switch ($selected) {
-        1 {
-            $url = Read-Host (T "ProxyInputUrl")
-            if ([string]::IsNullOrWhiteSpace($url)) { $url = $GitHubProxy }
-            $url = $url.TrimEnd('/')
-            $Global:UseGitHubProxy = $true
-            $Global:GitHubProxy = $url
-        }
-        2 {
-            $addr = Read-Host (T "ProxyInputCustom")
-            if ([string]::IsNullOrWhiteSpace($addr)) { $addr = $Proxy }
-            $Global:UseProxy = $true
-            $Global:Proxy = $addr
-        }
-    }
-}
-Clear-Host
-$host.UI.RawUI.WindowTitle = T "Title"
-Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  " (T "Title") -ForegroundColor Yellow
-Write-Host "========================================" -ForegroundColor Cyan
-if (-not $UseGitHubProxy -and -not $UseProxy) {
-    Select-ProxyMode
-}
-$gameRoot = ""
-while ($true) {
-    $inputDir = Read-Host (T "InputGameDir")
-    $inputDir = $inputDir.Trim()
-    if ([string]::IsNullOrWhiteSpace($inputDir)) {
-        Write-Host (T "GameDirNotFound" "null") -ForegroundColor Red
-        continue
-    }
-    $inputDir = $inputDir.Trim('"', "'")
-    if (-not (Test-Path $inputDir)) {
-        Write-Host (T "GameDirNotFound" $inputDir) -ForegroundColor Red
-        continue
-    }
-    $exePath = Join-Path $inputDir "game\Game\Binaries\Win64\Game.exe"
-    if (-not (Test-Path $exePath)) {
-        Write-Host (T "GameExeNotFound" $inputDir) -ForegroundColor Red
-    }
-    else {
-        $gameRoot = $inputDir
-        Write-Host (T "GameDirDetected") -ForegroundColor Green
-        break
-    }
-    $choices = [System.Management.Automation.Host.ChoiceDescription[]]@(
-        [System.Management.Automation.Host.ChoiceDescription]::new((T "YesLabel"), (T "YesHelp")),
-        [System.Management.Automation.Host.ChoiceDescription]::new((T "NoLabel"), (T "NoHelp"))
-    )
-    $confirm = $Host.UI.PromptForChoice("", (T "DirConfirm"), $choices, 0)
-    if ($confirm -eq 0) {
-        $gameRoot = $inputDir
-        break
-    }
-}
-$modsDir = Join-Path $gameRoot $ModsSubPath
-Write-Host (T "FetchingLatest") -ForegroundColor Green
-try {
-    $latestRelease = Invoke-RestMethodCompatible -Uri "$ApiBase/releases/latest"
-    $tagName = $latestRelease.tag_name
-    $releaseName = $latestRelease.name
-    $releaseAssets = $latestRelease.assets
-    Write-Host (T "ParsedReleaseInfo" $releaseName $tagName) -ForegroundColor Cyan
-    $assetMap = @{}
-    foreach ($asset in $releaseAssets) {
-        $name = $asset.name
-        $sha256Hex = ""
-        if ($asset.digest -match "^sha256:([a-f0-9]+)$") {
-            $sha256Hex = $Matches[1]
-        }
-        $assetMap[$name] = @{
-            Sha256 = $sha256Hex
-            Url    = $asset.browser_download_url
-            Size   = $asset.size
-        }
-    }
-}
-catch {
-    Write-Host (T "FetchLatestFail" $_.Exception.Message) -ForegroundColor Red
-    Show-Pause
-    exit 1
-}
-Write-Host (T "CheckingLocalMods") -ForegroundColor Green
-if (-not (Test-Path $modsDir)) {
-    Write-Host (T "NoPaksDir" $ModsSubPath) -ForegroundColor Yellow
-    New-Item -ItemType Directory -Path $modsDir -Force | Out-Null
-    Write-Host (T "PaksDirCreated" $modsDir) -ForegroundColor Cyan
-    Write-Host (T "ModNotInstalled") -ForegroundColor Yellow
-    Write-Host (T "WillDownloadCount" $assetMap.Count) -ForegroundColor Cyan
-    $installMode = "install"
-}
-else {
-    $existingPaks = @()
-    foreach ($assetName in $assetMap.Keys) {
-        $localPath = Join-Path $modsDir $assetName
-        if (Test-Path $localPath) {
-            $existingPaks += $assetName
-        }
-    }
-    if ($existingPaks.Count -eq 0) {
+    Write-Host (T "CheckingLocalMods") -ForegroundColor Green
+    if (-not (Test-Path $modsDir)) {
+        Write-Host (T "NoPaksDir" $ModsSubPath) -ForegroundColor Yellow
+        New-Item -ItemType Directory -Path $modsDir -Force | Out-Null
+        Write-Host (T "PaksDirCreated" $modsDir) -ForegroundColor Cyan
         Write-Host (T "ModNotInstalled") -ForegroundColor Yellow
         Write-Host (T "WillDownloadCount" $assetMap.Count) -ForegroundColor Cyan
         $installMode = "install"
     }
     else {
-        Write-Host (T "ModFilesFound" $existingPaks.Count) -ForegroundColor Cyan
-        $needUpdate = $false
-        $needDownload = @{}
+        $existingPaks = @()
         foreach ($assetName in $assetMap.Keys) {
             $localPath = Join-Path $modsDir $assetName
-            $assetInfo = $assetMap[$assetName]
             if (Test-Path $localPath) {
-                Write-Host (T "Sha256Verify" $assetName) -ForegroundColor Gray
-                $localHash = Get-FileSha256 -FilePath $localPath
-                if ($localHash -and $assetInfo.Sha256 -and ($localHash -eq $assetInfo.Sha256)) {
-                    Write-Host (T "Sha256Match") -ForegroundColor Green
+                $existingPaks += $assetName
+            }
+        }
+        if ($existingPaks.Count -eq 0) {
+            Write-Host (T "ModNotInstalled") -ForegroundColor Yellow
+            Write-Host (T "WillDownloadCount" $assetMap.Count) -ForegroundColor Cyan
+            $installMode = "install"
+        }
+        else {
+            Write-Host (T "ModFilesFound" $existingPaks.Count) -ForegroundColor Cyan
+            $needUpdate = $false
+            $needDownload = @{}
+            foreach ($assetName in $assetMap.Keys) {
+                $localPath = Join-Path $modsDir $assetName
+                $assetInfo = $assetMap[$assetName]
+                if (Test-Path $localPath) {
+                    Write-Host (T "Sha256Verify" $assetName) -ForegroundColor Gray
+                    $localHash = Get-FileSha256 -FilePath $localPath
+                    if ($localHash -and $assetInfo.Sha256 -and ($localHash -eq $assetInfo.Sha256)) {
+                        Write-Host (T "Sha256Match") -ForegroundColor Green
+                    }
+                    else {
+                        Write-Host (T "Sha256Mismatch") -ForegroundColor Yellow
+                        $needUpdate = $true
+                        $needDownload[$assetName] = $assetInfo
+                    }
                 }
                 else {
-                    Write-Host (T "Sha256Mismatch") -ForegroundColor Yellow
                     $needUpdate = $true
                     $needDownload[$assetName] = $assetInfo
+                    Write-Host (T "Sha256Verify" $assetName) -ForegroundColor Gray
+                    Write-Host (T "LocalFileMissing") -ForegroundColor Yellow
                 }
             }
-            else {
-                $needUpdate = $true
-                $needDownload[$assetName] = $assetInfo
-                Write-Host (T "Sha256Verify" $assetName) -ForegroundColor Gray
-                Write-Host (T "LocalFileMissing") -ForegroundColor Yellow
+            if (-not $needUpdate) {
+                Write-Host (T "AllUpToDate") -ForegroundColor Green
+                Write-Host (T "AlreadyLatest" $releaseName) -ForegroundColor Cyan
+                Show-Pause
+                exit 0
             }
+            Write-Host (T "WillDownloadCount" $needDownload.Count) -ForegroundColor Yellow
+            $installMode = "update"
+            $downloadTargets = $needDownload
         }
-        if (-not $needUpdate) {
-            Write-Host (T "AllUpToDate") -ForegroundColor Green
-            Write-Host (T "AlreadyLatest" $releaseName) -ForegroundColor Cyan
-            Show-Pause
-            $scriptPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "$([System.IO.Path]::GetFileNameWithoutExtension($MyInvocation.MyCommand.Path)).ps1"
-            if (Test-Path $scriptPath) { Remove-Item $scriptPath -Force -ErrorAction SilentlyContinue }
-            exit 0
-        }
-        Write-Host (T "WillDownloadCount" $needDownload.Count) -ForegroundColor Yellow
-        $installMode = "update"
-        $downloadTargets = $needDownload
     }
-}
-Write-Host (T "DownloadStart") -ForegroundColor Green
-if ($installMode -eq "install") {
-    $downloadTargets = $assetMap
-}
-$totalFiles = $downloadTargets.Count
-$currentFile = 0
-$successCount = 0
-$failCount = 0
-foreach ($entry in $downloadTargets.GetEnumerator()) {
-    $fileName = $entry.Key
-    $assetInfo = $entry.Value
-    $currentFile++
-    $localPath = Join-Path $modsDir $fileName
-    $downloadUrl = Get-DownloadUrl -OriginalUrl $assetInfo.Url
-    Write-Host (T "Downloading" $fileName (Format-FileSize $assetInfo.Size)) -ForegroundColor Cyan
-    Write-Host (T "DownloadProgress" $currentFile $totalFiles) -ForegroundColor Gray
-    try {
-        Invoke-WebRequestCompatible -Uri $downloadUrl -OutFile $localPath
-        if ($assetInfo.Sha256) {
-            $downloadedHash = Get-FileSha256 -FilePath $localPath
-            if ($downloadedHash -ne $assetInfo.Sha256) {
-                Write-Host (T "Sha256Corrupted") -ForegroundColor Red
-                Remove-Item $localPath -Force -ErrorAction SilentlyContinue
-                throw "SHA256 mismatch"
+    Write-Host (T "DownloadStart") -ForegroundColor Green
+    if ($installMode -eq "install") {
+        $downloadTargets = $assetMap
+    }
+    $totalFiles = $downloadTargets.Count
+    $currentFile = 0
+    $successCount = 0
+    $failCount = 0
+    foreach ($entry in $downloadTargets.GetEnumerator()) {
+        $fileName = $entry.Key
+        $assetInfo = $entry.Value
+        $currentFile++
+        $localPath = Join-Path $modsDir $fileName
+        $downloadUrl = Get-DownloadUrl -OriginalUrl $assetInfo.Url
+        Write-Host (T "Downloading" $fileName (Format-FileSize $assetInfo.Size)) -ForegroundColor Cyan
+        Write-Host (T "DownloadProgress" $currentFile $totalFiles) -ForegroundColor Gray
+        try {
+            Invoke-WebRequestCompatible -Uri $downloadUrl -OutFile $localPath
+            if ($assetInfo.Sha256) {
+                $downloadedHash = Get-FileSha256 -FilePath $localPath
+                if ($downloadedHash -ne $assetInfo.Sha256) {
+                    Write-Host (T "Sha256Corrupted") -ForegroundColor Red
+                    Remove-Item $localPath -Force -ErrorAction SilentlyContinue
+                    throw "SHA256 mismatch"
+                }
             }
+            Write-Host (T "DownloadComplete" $fileName) -ForegroundColor Green
+            Write-Host (T "FileSizeBytes" (Format-FileSize $assetInfo.Size)) -ForegroundColor Gray
+            $successCount++
         }
-        Write-Host (T "DownloadComplete" $fileName) -ForegroundColor Green
-        Write-Host (T "FileSizeBytes" (Format-FileSize $assetInfo.Size)) -ForegroundColor Gray
-        $successCount++
+        catch {
+            Write-Host (T "DownloadError" $_.Exception.Message) -ForegroundColor Red
+            $failCount++
+        }
     }
-    catch {
-        Write-Host (T "DownloadError" $_.Exception.Message) -ForegroundColor Red
-        $failCount++
+    Write-Host "========================================" -ForegroundColor Cyan
+    if ($failCount -eq 0) {
+        Write-Host (T "InstallSuccess") -ForegroundColor Green
+        Write-Host (T "AlreadyLatest" $releaseName) -ForegroundColor Cyan
     }
+    else {
+        Write-Host (T "DownloadResultSummary" $successCount $totalFiles $failCount) -ForegroundColor Yellow
+    }
+    Write-Host "========================================" -ForegroundColor Cyan
+    Show-Pause
 }
-Write-Host "========================================" -ForegroundColor Cyan
-if ($failCount -eq 0) {
-    Write-Host (T "InstallSuccess") -ForegroundColor Green
-    Write-Host (T "AlreadyLatest" $releaseName) -ForegroundColor Cyan
+catch {
+    Write-Host $_ -ForegroundColor Red
+    Show-Pause
 }
-else {
-    Write-Host (T "DownloadResultSummary" $successCount $totalFiles $failCount) -ForegroundColor Yellow
+finally {
+    $scriptPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "$([System.IO.Path]::GetFileNameWithoutExtension($MyInvocation.MyCommand.Path)).ps1"
+    if (Test-Path $scriptPath) { Remove-Item $scriptPath -Force -ErrorAction SilentlyContinue }
 }
-Write-Host "========================================" -ForegroundColor Cyan
-$scriptPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "$([System.IO.Path]::GetFileNameWithoutExtension($MyInvocation.MyCommand.Path)).ps1"
-if (Test-Path $scriptPath) { Remove-Item $scriptPath -Force -ErrorAction SilentlyContinue }
-Show-Pause
