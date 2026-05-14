@@ -53,7 +53,13 @@ $Global:ModsSubPath = "game\Game\Content\Paks\mods"
 $I18N = @{
     "zh-CN" = @{
         Title                  = "Snowbreak-AnitAmend 安装/更新工具"
-        InputGameDir           = "请输入游戏根目录（即 version.cfg 或 manifest.json 所在目录）"
+        GameDirHelp            = @'
+如何找到游戏安装位置？
+西山居启动器：点击 开始游戏 旁边的齿轮 -> 点击 侧边栏的游戏 -> 点击 游戏安装目录边上的查看按钮
+尘白禁区启动器：点击 开始游戏 旁边的三个横线 -> 点击 安装位置
+若操作正确，当前打开的位置就是游戏安装位置！
+'@
+        InputGameDir           = "请输入游戏安装位置"
         GameDirNotFound        = "目录不存在：{0}"
         NoPaksDir              = "未找到 {0} 目录，正在创建..."
         PaksDirCreated         = "目录已创建：{0}"
@@ -84,7 +90,7 @@ $I18N = @{
         YesHelp                = "确认"
         NoHelp                 = "取消"
         WillDownloadCount      = "将下载 {0} 个文件..."
-        GameExeNotFound        = "未找到 Game.exe（{0}），请确认游戏根目录是否正确"
+        GameExeNotFound        = "未找到 Game.exe（{0}），请确认输入的游戏安装位置是否正确"
         DownloadStart          = "开始下载..."
         FileSizeBytes          = "文件大小：{0}"
         ProxyTitle             = ""
@@ -95,20 +101,26 @@ $I18N = @{
         ProxyChoiceHelpGHP     = "通过 gh-proxy 镜像加速下载"
         ProxyChoiceLabelCustom = "&Custom proxy"
         ProxyChoiceHelpCustom  = "使用自定义的 HTTP/HTTPS 代理服务器"
-        ProxyInputUrl          = "请输入 GitHub 代理镜像 URL（默认 https://gh-proxy.org/）"
+        ProxyInputUrl          = "请输入 GitHub 代理镜像 URL（默认 https://gh-proxy.org）"
         ProxyInputCustom       = "请输入自定义 HTTP 代理地址（默认 http://127.0.0.1:7890）"
         ProxyConflictDetailed  = "UseProxy 和 UseGitHubProxy 参数不能同时使用，请选择其中一种代理方式。"
         CompatibleWebReqErr    = "[兼容模式] Invoke-WebRequest 失败：{0}"
-        RetryFetch             = "拉取失败，正在进行第 {0} 次重试..."
+        RetryFetch             = "拉取失败，正在进行第{0} 次重试..."
     }
     "en-US" = @{
-        Title                  = "Snowbreak-AnitAmend Install/Update Tool"
-        InputGameDir           = "Enter the game root directory (where version.cfg or manifest.json is located)"
+        Title                  = "Snowbreak-AnitAmend Install / Update Tool"
+        GameDirHelp            = @'
+How to find the game installation directory?
+Xishanju Launcher: Click the gear icon next to Start Game -> Click Game in the sidebar -> Click the View button next to Game Install Directory
+Snowbreak Launcher: Click the three lines next to Start Game -> Click Installation Location
+If done correctly, the current location shown is the game installation directory!
+'@
+        InputGameDir           = "Enter the game installation directory"
         GameDirNotFound        = "Directory not found: {0}"
         NoPaksDir              = "Directory {0} not found, creating..."
         PaksDirCreated         = "Directory created: {0}"
         FetchingLatest         = "Fetching latest release info from GitHub..."
-        FetchLatestFail        = "Failed to fetch latest release! {0}"
+        FetchLatestFail        = "Failed to fetch latest release!{0}"
         ParsedReleaseInfo      = "Latest version: {0} ({1})"
         CheckingLocalMods      = "Checking local mod files..."
         ModNotInstalled        = "Mod not installed, preparing to download..."
@@ -121,11 +133,11 @@ $I18N = @{
         Sha256Corrupted        = "  SHA256 verification failed, deleting corrupted file..."
         DownloadResultSummary  = "Success: {0} / {1}, Failed: {2}"
         Downloading            = "Downloading: {0} ({1})..."
-        DownloadProgress       = "  Progress: {0}/{1} files"
+        DownloadProgress       = "  Progress: {0} / {1} files"
         DownloadComplete       = "Download complete: {0}"
         DownloadError          = "Download failed: {0}"
         AlreadyLatest          = "All mods are up to date ({0})!"
-        InstallSuccess         = "Mod installation/update complete!"
+        InstallSuccess         = "Mod installation / update complete!"
         PressAnyKey            = "Press any key to exit..."
         GameDirDetected        = "Detected game."
         DirConfirm             = "Is this directory correct?"
@@ -134,7 +146,7 @@ $I18N = @{
         YesHelp                = "Confirm"
         NoHelp                 = "Cancel"
         WillDownloadCount      = "Will download {0} files..."
-        GameExeNotFound        = "Game.exe not found ({0}). Please verify the game root directory"
+        GameExeNotFound        = "Game.exe not found ({0}). Please verify the game installation directory"
         DownloadStart          = "Starting download..."
         FileSizeBytes          = "File size: {0}"
         ProxyTitle             = ""
@@ -144,8 +156,8 @@ $I18N = @{
         ProxyChoiceLabelGHP    = "&GitHub proxy"
         ProxyChoiceHelpGHP     = "Accelerate download via gh-proxy mirror"
         ProxyChoiceLabelCustom = "&Custom proxy"
-        ProxyChoiceHelpCustom  = "Use a custom HTTP/HTTPS proxy server"
-        ProxyInputUrl          = "Enter GitHub proxy mirror URL (default https://gh-proxy.org/)"
+        ProxyChoiceHelpCustom  = "Use a custom HTTP / HTTPS proxy server"
+        ProxyInputUrl          = "Enter GitHub proxy mirror URL (default https://gh-proxy.org)"
         ProxyInputCustom       = "Enter custom HTTP proxy address (default http://127.0.0.1:7890)"
         ProxyConflictDetailed  = "UseProxy and UseGitHubProxy cannot be used together. Choose one proxy method."
         CompatibleWebReqErr    = "[Compatible] Invoke-WebRequest failed: {0}"
@@ -316,11 +328,11 @@ try {
         Select-ProxyMode
     }
     $gameRoot = ""
+    Write-Host (T "GameDirHelp") -ForegroundColor Yellow
     while ($true) {
         $inputDir = Read-Host (T "InputGameDir")
         $inputDir = $inputDir.Trim()
         if ([string]::IsNullOrWhiteSpace($inputDir)) {
-            Write-Host (T "GameDirNotFound" "null") -ForegroundColor Red
             continue
         }
         $inputDir = $inputDir.Trim('"', "'")
@@ -341,7 +353,7 @@ try {
             [System.Management.Automation.Host.ChoiceDescription]::new((T "YesLabel"), (T "YesHelp")),
             [System.Management.Automation.Host.ChoiceDescription]::new((T "NoLabel"), (T "NoHelp"))
         )
-        $confirm = $Host.UI.PromptForChoice("", (T "DirConfirm"), $choices, 0)
+        $confirm = $Host.UI.PromptForChoice("", (T "DirConfirm"), $choices, 1)
         if ($confirm -eq 0) {
             $gameRoot = $inputDir
             break
